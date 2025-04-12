@@ -46,7 +46,8 @@ jobs:
         run: | 
           kubectl apply -f k8s/
           kubectl get svc
-
+      - name: destroy infra
+        run: terraform destroy
 
 
 
