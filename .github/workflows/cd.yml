@@ -44,7 +44,7 @@ jobs:
 
       - name: applying deployement
         run: | 
-          kubectl apply -f deployement.yml
+          kubectl apply -f k8s/
           kubectl get svc
 
 
