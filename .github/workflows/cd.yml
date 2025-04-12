@@ -36,5 +36,11 @@ jobs:
         run: terraform apply -auto-approve
         working-directory: Terraform_Architecture
 
+      - name: update kube config file
+        run: aws eks update-kubeconfig --region ap-south-1 --name basecluster
+
+      - name: list nodes
+        run: kubectl get nodes
+
       
   
