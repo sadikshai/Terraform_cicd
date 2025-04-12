@@ -11,14 +11,13 @@ data "aws_ami" "ubuntu" {
 
 
 resource "aws_instance" "bastion" {
-    key_name = var.instance_key_name
-    ami = data.aws_ami.ubuntu.id
-    security_groups = [ var.security_bn ]
-    subnet_id = var.subnet_id
-    associate_public_ip_address = true
-    instance_type = var.instance_type
-    tags = {
-        Name=var.instance_name
-    }
-  
+  key_name                    = var.instance_key_name
+  ami                         = data.aws_ami.ubuntu.id
+  vpc_security_group_ids      = [var.security_bn] # <- FIXED
+  subnet_id                   = var.subnet_id
+  associate_public_ip_address = true
+  instance_type               = var.instance_type
+  tags = {
+    Name = var.instance_name
+  }
 }
