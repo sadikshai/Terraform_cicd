@@ -70,7 +70,7 @@ module "security_group" {
 
 
 module "bastion" {
-    source="./bastionost"
+    source="./bastion"
     ami_value = "ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"
     ami_owner = "099720109477"
     instance_key_name = "my_id"
