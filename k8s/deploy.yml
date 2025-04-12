@@ -22,7 +22,7 @@ spec:
 
     spec:
       containers: 
-        - image: sadik8143/springclinic:46
+        - image: sadik8143/spc:1.0
           name: webcont
           resources: 
             limits:
