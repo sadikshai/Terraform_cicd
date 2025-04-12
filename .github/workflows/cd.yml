@@ -42,7 +42,13 @@ jobs:
       - name: list nodes
         run: kubectl get nodes
 
+      - name: applying deployement
+        run: | 
+          kubectl apply -f deployement.yml
+          kubectl get svc
 
-        
+
+
+
       
   
